@@ -12,21 +12,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sellers")
-public class Saller {
+public class Seller {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	
-	@OneToMany(mappedBy = "saller")
+	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
 
-	public Saller() {
+	public Seller() {
 
 	}
 
-	public Saller(Long id, String name) {
+	public Seller(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
